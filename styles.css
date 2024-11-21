@@ -1,0 +1,51 @@
+/* Custom slider styles for volume control and time bar */
+input[type="range"]::-webkit-slider-thumb {
+  background: #4ade80;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+/* Active state styling for the loop icon */
+.loop-active {
+  color: #dd6626; /* Bright green for active loop mode */
+}
+
+#current-time,
+#total-time {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Animation for the play button */
+@keyframes playBtnAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#play-btn {
+  animation: playBtnAnimation 1.5s ease-in-out infinite;
+}
